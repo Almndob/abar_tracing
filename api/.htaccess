@@ -1,0 +1,10 @@
+# Allow access to PHP files in this folder for API calls
+<FilesMatch "\.php$">
+    Allow from all
+</FilesMatch>
+
+# Deny access to all other files
+<FilesMatch "(?<!\.php)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
